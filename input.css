@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/*we have applied clip path in circle format*/
+/*whatever the value of clip is going on , that much we have to clip from center*/
+/*50% 50% shows the center */
+@layer components {
+  .videodiv {
+    clip-path: circle(var(--clip) at 50% 50%);
+  }
+}
+@layer components {
+    .black {
+      @apply bg-black text-white;
+    }
+  }
+  @layer components {
+    .cyan {
+      @apply bg-cyan text-dcyan;
+    }
+  }
+  @layer components {
+    .salmon {
+      @apply bg-salmon text-dsalmon ;
+    }
+  }
+
+  @layer components {
+    .white {
+      @apply bg-white text-black;
+    }
+  }
+  @layer components{
+    *::selection{
+        @apply bg-[#ef9d71];
+
+    }
+}
